@@ -1,0 +1,92 @@
+:root {
+  --red-color: hsl(14, 86%, 42%);
+  --green-color: hsl(159, 69%, 38%);
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: hsl(14, 25%, 72%);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+h2 {
+  font-size: 16px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--rose-50);
+}
+.products {
+  width: 70%;
+}
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+}
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+img:hover {
+  border: 2px solid var(--red-color);
+}
+button {
+  position: absolute;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid var(--rose-300);
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.product-details {
+  margin-top: 30px;
+}
+.product-details :first-child {
+  color: var(--rose-300);
+}
+.price {
+  color: var(--red-color);
+  font-weight: bold;
+}
+.cart {
+  width: 30%;
+}
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
