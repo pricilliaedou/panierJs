@@ -1,3 +1,31 @@
+/* Fonts import */
+
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("./assets/fonts/static/RedHatText-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("./assets/fonts/static/RedHatText-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("./assets/fonts/static/RedHatText-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("./assets/fonts/RedHatText-VariableFont_wght.ttf") format("truetype");
+  font-weight: 700;
+}
 :root {
   --red-color: hsl(14, 86%, 42%);
   --green-color: hsl(159, 69%, 38%);
@@ -14,15 +42,21 @@
   box-sizing: border-box;
 }
 
-/* Typography */
-h2 {
-  font-size: 16px;
+body {
+  font-family: "Red Hat Text", sans-serif;
 }
+h1 {
+  padding: 10px;
+}
+
 .container {
   max-width: 1440px;
+  display: flex;
+  gap: 10px;
   margin: 0 auto;
   padding: 20px;
-  background-color: var(--rose-50);
+  background-color: var(--rose-100);
+  border-radius: 5px;
 }
 .products {
   width: 70%;
@@ -36,7 +70,6 @@ h2 {
 .product {
   display: flex;
   flex-direction: column;
-  padding: 10px;
   width: 30%;
   justify-content: space-between;
 }
@@ -62,15 +95,45 @@ button {
   border-radius: 20px;
   background-color: #fff;
   border: 1px solid var(--rose-300);
+  cursor: pointer;
 }
-.btn {
+.btn-add-to-cart {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
+
+button:hover {
+  border: 1px solid var(--red-color);
+}
+
+/* div btn  */
+.btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: var(--red-color);
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  /* border: 1px solid var(--rose-300); */
+}
+.increment,
+.decrement {
+  cursor: pointer;
+}
+
+.counter {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
 .product-details {
   margin-top: 30px;
+}
+.product-details h2 {
+  font-size: 16px;
 }
 .product-details :first-child {
   color: var(--rose-300);
@@ -79,8 +142,16 @@ button {
   color: var(--red-color);
   font-weight: bold;
 }
+
+/* cart */
 .cart {
   width: 30%;
+  background-color: var(--rose-50);
+  height: max-content;
+  border-radius: 5px;
+}
+.cart-header h2 {
+  padding: 10px;
 }
 /* Footer */
 .attribution {
