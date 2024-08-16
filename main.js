@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         counter.textContent = count;
       } else {
         // If counter is 1, hide the increment/decrement buttons and show "Add to Cart" button
-        addToCartBtn.parentElement.style.display = "block";
+        addToCartBtn.parentElement.style.display = "flex";
         btnDiv.style.display = "none";
         counter.textContent = "0";
       }

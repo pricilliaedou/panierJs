@@ -49,6 +49,8 @@ h1 {
   padding: 10px;
 }
 
+/* BODY */
+
 .container {
   max-width: 1440px;
   display: flex;
@@ -88,8 +90,19 @@ img {
 img:hover {
   border: 2px solid var(--red-color);
 }
+
+/* Btn Add to cart */
+.btn-add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 button {
   position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   border: none;
   padding: 5px 10px;
   border-radius: 20px;
@@ -97,28 +110,43 @@ button {
   border: 1px solid var(--rose-300);
   cursor: pointer;
 }
-.btn-add-to-cart {
+
+button:hover {
+  border: 1px solid var(--red-color);
+}
+
+/* Btn when articles are selected */
+.btn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
 
-button:hover {
-  border: 1px solid var(--red-color);
-}
-
-/* div btn  */
-.btn {
+.btn-svg {
+  position: absolute;
   border: none;
   padding: 5px 10px;
   border-radius: 20px;
   background-color: var(--red-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
-  /* border: 1px solid var(--rose-300); */
+  width: 60%;
 }
+.btn-svg-circle {
+  color: #fff;
+  border: 1px solid #fff;
+  align-items: center;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  border-radius: 100%;
+}
+
 .increment,
 .decrement {
   cursor: pointer;
@@ -126,7 +154,8 @@ button:hover {
 
 .counter {
   margin: 0 10px;
-  font-size: 16px;
+  font-size: 12px;
+  color: #fff;
 }
 
 .product-details {
